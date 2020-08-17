@@ -35,13 +35,13 @@ pipeline {
           steps {
             sh ' mvn checkstyle:checkstyle'
             step([$class: 'CheckStylePublisher',
-                                                                               //canRunOnFailed: true,
-                                                                               defaultEncoding: '',
-                                                                               healthy: '100',
-                                                                               pattern: '**/target/checkstyle-result.xml',
-                                                                               unHealthy: '90',
-                                                                               //useStableBuildAsReference: true
-                                                                              ])
+                                                                                                       //canRunOnFailed: true,
+                                                                                                       defaultEncoding: '',
+                                                                                                       healthy: '100',
+                                                                                                       pattern: '**/target/checkstyle-result.xml',
+                                                                                                       unHealthy: '90',
+                                                                                                       //useStableBuildAsReference: true
+                                                                                                      ])
           }
         }
 
@@ -312,7 +312,7 @@ ansible-playbook -v -i ./ansible_provisioning/hosts --extra-vars "host=productio
 environment {
 NEXUS_VERSION = 'nexus3'
 NEXUS_PROTOCOL = 'http'
-NEXUS_URL = '34.66.153.210:8081'
+NEXUS_URL = '107.178.222.81:8081'
 NEXUS_REPOSITORY = 'maven-snapshots'
 NEXUS_CREDENTIAL_ID = 'nexus-credentials'
 SONARQUBE_URL = 'http://35.192.208.122'

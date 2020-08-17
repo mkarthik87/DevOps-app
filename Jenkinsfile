@@ -35,13 +35,13 @@ pipeline {
           steps {
             sh ' mvn checkstyle:checkstyle'
             step([$class: 'CheckStylePublisher',
-                                                                                                       //canRunOnFailed: true,
-                                                                                                       defaultEncoding: '',
-                                                                                                       healthy: '100',
-                                                                                                       pattern: '**/target/checkstyle-result.xml',
-                                                                                                       unHealthy: '90',
-                                                                                                       //useStableBuildAsReference: true
-                                                                                                      ])
+                                                                                                                               //canRunOnFailed: true,
+                                                                                                                               defaultEncoding: '',
+                                                                                                                               healthy: '100',
+                                                                                                                               pattern: '**/target/checkstyle-result.xml',
+                                                                                                                               unHealthy: '90',
+                                                                                                                               //useStableBuildAsReference: true
+                                                                                                                              ])
           }
         }
 
@@ -315,7 +315,7 @@ NEXUS_PROTOCOL = 'http'
 NEXUS_URL = '107.178.222.81:8081'
 NEXUS_REPOSITORY = 'maven-snapshots'
 NEXUS_CREDENTIAL_ID = 'nexus-credentials'
-SONARQUBE_URL = 'http://35.192.208.122'
+SONARQUBE_URL = 'http://35.226.3.215'
 SONARQUBE_PORT = '9000'
 }
 options {
